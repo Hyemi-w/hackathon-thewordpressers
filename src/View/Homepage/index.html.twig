@@ -1,19 +1,57 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+    <header>
     <section>
         <div class="jumbotron jumbotron-fluid align-items-center">
             <div class="container-fluid ">
-                <h1 class="h1 jumbotron-title text-center">Nick's Big'ol Farm</h1>
+                <h1 class="h1 jumbotron-title text-center">MacDonald's Big'ol Farm</h1>
                 <p class="jumbotron-text text-center">Come discover the real farm life</p>
                 <div class="text-center arrow-down">
-                    <a href="#form"><img src="/assets/images/arrow-down.png" class="" alt="descendre"></a>
+                    <a href="#farm"><img src="/assets/images/arrow-down.png" class="" alt="descendre"></a>
                 </div>
+            </div>
+        </div>
+    </section>
+    </header>
+<body>
+    <section class="farm" id="farm">
+
+        <div class="container-fluid py-3">
+
+            <div class="row">
+                <div class="col-lg-8 col-sm-12 text-center mx-auto">
+                    <h2>Who are we ?</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center py-3">
+                <div class="col-lg-8 col-sm-12 text-center mx-auto display">
+                    <div class="text-center mx-auto">
+
+
+                        <p>Old MACDONALD had a farm E-I-E-I-O</p>
+                        <p>And on his farm he had a cow E-I-E-I-O</p>
+                        <p>With a moo moo here</p>
+                        <p>And a moo moo there</p>
+                        <p>Here a moo, there a moo</p>
+                        <p>Everywhere a moo moo</p>
+                        <p>Old MacDonald had a farm E-I-E-I-O</p>
+                        <div class="text-center mx-auto py-5">
+                            <button class="btn btn-lg">MacDonald's farm</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-12 text-center py-5">
+                    <img src="/assets/images/cow1.webp" class="img-thumbnail" alt="Responsive image">
+                </div>
+
             </div>
         </div>
     </section>
 
     <section class="container fluid text-center" id="form" >
+        <div class="form">
         <h2>Come spend easter's week-end with us</h2>
         <form action="index.php" method="POST" novalidate>
             <div class="form-group">
@@ -27,7 +65,9 @@
             </div>
             <button class="btn btn-success"> Reservation request</button>
         </form>
+        </div>
     </section>
+</body>
 
 {% endblock %}
 

@@ -36,9 +36,64 @@
 }
 /*fin jumbotron*/
 
-/* debut formulaire*/
-.form-group {
+/*début content*/
+body{
 
+    background-image: url("../images/background.webp");
+
+}
+.display {
+    display: flex;
+    align-items: center;
+}
+
+p {
+
+    font-family: 'Lato', sans-serif;
+    font-size: 2em;
+
+}
+
+h1{
+
+    font-family: 'Montserrat', sans-serif;
+    font-size:4em;
+}
+
+h2 {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size:2.5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.btn{
+    margin-top: 1em;
+    color : white;
+    background-color: #b30000;
+    transition: all 0.4s ease 0s;
+    border:none;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+.btn:hover{
+    color : white;
+    background-color: #800000;
+    border:none;
+}
+
+label{
+
+    font-size: 2em;
+
+}
+/*fin content*/
+
+/* debut formulaire*/
+.form {
+
+    padding-top: 4em;
 
 }
 
