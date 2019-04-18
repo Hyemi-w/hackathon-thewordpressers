@@ -77,7 +77,7 @@ class HomeController extends AbstractController
         }
 
         $isGiving = '';
-        if(stristr($character['origin'], 'earth') or strstr($character['origin'], 'Jerusalem')
+        if (stristr($character['origin'], 'earth') or strstr($character['origin'], 'Jerusalem')
             or stristr($character['origin'], 'unknow') or stristr($character['origin'], 'Toons City')) {
             $isGiving = 'gives';
             $title =  'Yay !';
