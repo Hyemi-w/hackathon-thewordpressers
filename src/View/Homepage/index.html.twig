@@ -79,7 +79,7 @@
 
             <div class="row">
                 <div class="col-lg-8 col-sm-12 text-center mx-auto">
-                    <h2>Who are we ?</h2>
+                    <h2>Our crops</h2>
                 </div>
             </div>
             <div class="row justify-content-center py-3">
@@ -105,18 +105,29 @@
     <section class="container fluid text-center" id="form">
         <div class="form">
             <h2>Come spend Easter weekend with us</h2>
-            <form action="index.php" method="POST" >
+            <form action="" method="POST" novalidate>
                 <div class="form-group">
                     <label for="lastName">Lastname</label>
-                    <input class="form-control" type="text" name="lastName" id="lastName" required>
+                    <input class="form-control" type="text" name="lastName" id="lastName" required
+                           value="{{ lastName }}">
                 </div>
+                {% if errors.lastName is defined %}
+                    <div class="errors">{{ errors.lastName }}</div>
+                {% endif %}
 
                 <div class="form-group">
                     <label for="firstName">Firstname</label>
-                    <input class="form-control" type="text" name="firstName" id="firstName" required>
+                    <input class="form-control" type="text" name="firstName" id="firstName" required
+                           value="{{ firstName }}">
+                    <div class="text-danger"><?= $errors['firstName'] ?? '' ?>
+                    </div>
+                    {% if errors.firstName is defined %}
+                        <div class="errors">{{ errors.firstName }}</div>
+                    {% endif %}
                     <div class="form-group">
-                        <label for="exampleFormControlSelect1" >Number of person</label>
-                        <select class="form-control" id="exampleFormControlSelect1" required>
+                        <label for="exampleFormControlSelect1">Number of person</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="select" required
+                                value="{{ select }}">
                             <option></option>
                             <option>1</option>
                             <option>2</option>
@@ -124,17 +135,23 @@
                             <option>4</option>
                             <option>5</option>
                         </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Would you like to share something with us</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                        {% if errors.select is defined %}
+                            <div class="errors">{{ errors.select }}</div>
+                        {% endif %}
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Would you like to share something with us</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" name="suggestion" rows="3"
+                                      required value="{{ suggestion }}"></textarea>
+                            {% if errors.suggestion is defined %}
+                                <div class="errors">{{ errors.suggestion }}</div>
+                            {% endif %}
+                        </div>
+                        <button class="btn btn-success"> Reservation request</button>
                     </div>
                 </div>
-                <button class="btn btn-success"> Reservation request</button>
             </form>
         </div>
     </section>
     </body>
 
 {% endblock %}
-
