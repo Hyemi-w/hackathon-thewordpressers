@@ -23,3 +23,7 @@
 .border-modal{
     border: solid 3px lightblue;
 }
+
+canvas{
+	border: 1px solid black;
+}
