@@ -8,7 +8,7 @@
 
 namespace App\Controller;
 
-class HomeController extends AbstractController
+class HomePageController extends AbstractController
 {
 
     /**
@@ -21,6 +21,6 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        return $this->twig->render('Homepage/index.html.twig');
     }
 }
