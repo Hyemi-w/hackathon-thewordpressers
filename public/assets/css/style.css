@@ -1,0 +1,45 @@
+/* jumbotron homepage */
+
+.jumbotron {
+    background-image: url("../images/jumbotron.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 0;
+    height: 100vh;
+}
+
+.jumbotron-text {
+    color: #b30000;
+    font-size: 2vw;
+    padding: 2em 5.5em 8% 5.5em;
+    text-shadow:0.5px 0.5px #000000;
+}
+
+.jumbotron-title {
+    font-weight: lighter;
+    color: #800000;
+    font-size: 4vw;
+    padding-bottom: 5%;
+    text-shadow:0.5px 0.5px #000000;
+}
+
+
+.arrow-down img{
+    max-height:40px;
+
+}
+
+@media screen and (max-width: 600px) {
+    .jumbotron-fluid {
+        height:38vh;
+    }
+}
+/*fin jumbotron*/
+
+/* debut formulaire*/
+.form-group {
+
+
+}
+
+/* fin formulaire*/

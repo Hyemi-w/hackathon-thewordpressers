@@ -1,47 +1,33 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Welcome to the big ol' farm</h1>
-    <h2>Come spend easter's week-end with us</h2>
-    <section class='form' id='form'>
-    <form action="index.php" method="POST" novalidate>
+    <section>
+        <div class="jumbotron jumbotron-fluid align-items-center">
+            <div class="container-fluid ">
+                <h1 class="h1 jumbotron-title text-center">Nick's Big'ol Farm</h1>
+                <p class="jumbotron-text text-center">Come discover the real farm life</p>
+                <div class="text-center arrow-down">
+                    <a href="#form"><img src="/assets/images/arrow-down.png" class="" alt="descendre"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container fluid text-center" id="form" >
+        <h2>Come spend easter's week-end with us</h2>
+        <form action="index.php" method="POST" novalidate>
             <div class="form-group">
                 <label for="lastName">Lastname</label>
-                <input class="form-control" type="text" name="lastName" id="lastName" required value="<?php
-                if (!empty($errors)) {
-                    echo($data['lastName']);
-                }
-                ?>">
-                <div class="text-danger"><?= $errors['lastName'] ?? '' ?></div><!--message d'erreur-->
+                <input class="form-control" type="text" name="lastName" id="lastName" required>
             </div>
+
             <div class="form-group">
                 <label for="firstName">Firstname</label>
-                <input class="form-control" type="text" name="firstName" id="firstName" required value="<?php
-                if (!empty($errors)) {
-                    echo($data['firstName']);
-                }
-                ?>">
-                <div class="text-danger"><?= $errors['firstName'] ?? '' ?></div><!--message d'erreur-->
+                <input class="form-control" type="text" name="firstName" id="firstName" required>
             </div>
-
-            <?php foreach ($civilities as $civility): ?>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="civility" id="civility<?= $civility['id'] ?>"
-                           required value="civility<?= $civility['id'] ?>">
-                    <label class="form-check-label" for="civility<?= $civility['id'] ?>">
-                        <?= $civility['civility'] ?>
-                    </label>
-                </div>
-            <?php endforeach; ?>
-
-            <div class="text-danger"><?php if (isset($errors['civility'])): echo $errors['civility']; endif; ?>
-            </div>
-
-            <button class="btn btn-success"> Reservation request </button>
-
+            <button class="btn btn-success"> Reservation request</button>
         </form>
+    </section>
 
-       </section>
-
-    </div>
 {% endblock %}
+
