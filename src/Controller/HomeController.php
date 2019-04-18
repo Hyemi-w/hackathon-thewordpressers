@@ -47,6 +47,17 @@ class HomeController extends AbstractController
             $isWinning = 'losing';
         }
 
+        $title = '';
+        $isGiving = '';
+        if (stristr($character['origin'], 'earth') or strstr($character['origin'], 'Jerusalem')
+            or stristr($character['origin'], 'unknow') or stristr($character['origin'], 'Toons City')) {
+            $isGiving = 'gives';
+            $title =  'Yay !';
+        } else {
+            $isGiving = 'stoles';
+            $title = 'Crap !';
+        }
+
         $number = 0;
         $size = 0;
         if (strstr($egg['caliber'], 'XS')) {
@@ -74,16 +85,6 @@ class HomeController extends AbstractController
         if (strstr($egg['caliber'], '3XL')) {
             $number = 7;
             $size = 'an ENORMOUS';
-        }
-
-        $isGiving = '';
-        if (stristr($character['origin'], 'earth') or strstr($character['origin'], 'Jerusalem')
-            or stristr($character['origin'], 'unknow') or stristr($character['origin'], 'Toons City')) {
-            $isGiving = 'gives';
-            $title =  'Yay !';
-        } else {
-            $isGiving = 'stoles';
-            $title = 'Crap !';
         }
 
         $gender = '';
