@@ -37,14 +37,17 @@ class HomeController extends AbstractController
         $json = $body->getContents();
         $character = json_decode($json, true);
 
+        $eggCount = $_SESSION['eggCount'];
         $title = '';
         if (strstr($egg['power'], 'increase')) {
             $title = 'Yay !';
+            $eggCount ++;
         } elseif (strstr($egg['power'], 'decrease')) {
             $title = 'Crap !';
+            $eggCount --;
         }
-
+        $_SESSION['eggCount'] = $eggCount;
         return $this->twig->render('Home/index.html.twig', ['egg' => $egg, 'character' => $character,
-            'title' => $title]);
+            'title' => $title, 'eggCount' => $eggCount]);
     }
 }
