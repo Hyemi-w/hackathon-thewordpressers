@@ -1,95 +1,90 @@
 /* jumbotron homepage */
-
 .jumbotron {
     background-image: url("../images/jumbotron.webp");
     background-size: cover;
     background-attachment: fixed;
     margin-bottom: 0;
     height: 100vh;
+    background-color :rgba(0,0,0,0.3);
+    background-blend-mode: color;
 }
 
 .jumbotron-text {
-    color: #b30000;
+    color: #f9e5e0;
+    font-size: 4vw;
     padding: 2em 5.5em 8% 5.5em;
-    text-shadow:0.5px 0.5px #000000;
+    text-shadow:1px 5px 2px #000000;
+    font-family: 'Alfa Slab One', cursive;
 }
 
 .jumbotron-title {
-    font-weight: lighter;
-    color: #800000;
+    font-size: 5vw;
     padding-bottom: 5%;
-    text-shadow:0.5px 0.5px #000000;
+    text-shadow:1.5px 7px 2px #000000;
+    font-family: 'Alfa Slab One', cursive;
+    color: #f9e5e0;
 }
-
-
 .arrow-down img{
     max-height:40px;
-
 }
 
-@media screen and (max-width: 600px) {
-    .jumbotron-fluid {
-        height:38vh;
-    }
-}
 /*fin jumbotron*/
 
 /*début content*/
 body{
-
     background-image: url("../images/background.webp");
-
+    font-family: 'Bree Serif', serif;
+    font-size: 2.2em;
 }
+
 .display {
     display: flex;
     align-items: center;
 }
 
-p {
-
-
-    font-size: 3em;
-
-}
-
 h1{
-
-    font-size:6em;
+    font-family: 'Alfa Slab One', cursive;
+    font-size:3em;
 }
 
 h2 {
-    font-size:3.5em;
+
+    font-size:2em;
     padding-top: 2em;
     padding-bottom: 2em;
+    font-family: 'Alfa Slab One', cursive;
+    color: #7b5a38;
 }
 
 .btn{
     margin-top: 1em;
     color : white;
-    background-color: #b30000;
+    background-color: #7b5a38;
     transition: all 0.4s ease 0s;
     border:none;
     margin-bottom: 1em;
-    font-size: 2em;
+    font-size:1em;
 }
 .btn:hover{
     color : white;
-    background-color: #800000;
+    background-color: #493521;
     border:none;
 }
 
 label{
-
-    font-size: 2em;
-
+    font-size: 1em;
+    margin:20px;
+    padding:10px;
 }
 /*fin content*/
 
 /* debut formulaire*/
 .form {
-
     padding-top: 4em;
-
 }
 
 /* fin formulaire*/
+
+audio{
+    display:none;
+}
