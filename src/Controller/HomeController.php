@@ -76,7 +76,34 @@ class HomeController extends AbstractController
             $size = 'an ENORMOUS';
         }
 
+        $isGiving = '';
+        if(stristr($character['origin'], 'earth') or strstr($character['origin'], 'Jerusalem')
+            or stristr($character['origin'], 'unknow') or stristr($character['origin'], 'Toons City')) {
+            $isGiving = 'gives';
+            $title =  'Yay !';
+        } else {
+            $isGiving = 'stoles';
+            $title = 'Crap !';
+        }
+
+        $gender = '';
+        if (stristr($character['gender'], 'Male')) {
+            $gender = 'He';
+        }
+
+        if (stristr($character['gender'], 'Female')) {
+            $gender = 'She';
+        }
+
+        if (stristr($character['gender'], 'unknown')) {
+            $gender = 'It';
+        }
+
+        $skilllen = strlen($character['skills'][1]);
+        $skill = substr($character['skills'][1], 0, $skilllen-2);
+
         return $this->twig->render('Home/index.html.twig', ['egg' => $egg, 'character' => $character,
-            'title' => $title, 'isWinning' => $isWinning, 'number' => $number, 'size' => $size]);
+            'title' => $title, 'isWinning' => $isWinning, 'number' => $number, 'size' => $size,
+            'isGiving' => $isGiving, 'gender' => $gender, 'skill' => $skill]);
     }
 }
