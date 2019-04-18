@@ -12,7 +12,8 @@
         "php" : ">=7.2",
         "ext-pdo" : "*",
         "twig/twig": "^2.4",
-        "guzzlehttp/guzzle": "^6.3"
+        "guzzlehttp/guzzle": "^6.3",
+        "ext-json": "*"
     },
     "require-dev": {
         "phpro/grumphp": "^0.15.0",
