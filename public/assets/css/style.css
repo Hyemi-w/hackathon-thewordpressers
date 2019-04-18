@@ -1,6 +1,11 @@
 .egg-count img{
-    max-height : 30px;
+    max-height : 55px;
+    float: left;
+    margin-right: 20px;
 }
+
 .egg-count {
-    float : right;
+    font-family: 'Just Another Hand', cursive;
+    font-size : 45px;
 }
+

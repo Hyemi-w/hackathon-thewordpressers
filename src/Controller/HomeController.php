@@ -19,7 +19,6 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\SyntaxError
      */
 
-
     public function index()
     {
         $_SESSION['eggCount'] = 0;
