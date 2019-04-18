@@ -2,19 +2,19 @@
 
 {% block content %}
     <header>
-    <section>
-        <div class="jumbotron jumbotron-fluid align-items-center">
-            <div class="container-fluid ">
-                <h1 class="h1 jumbotron-title text-center">MacDonald's Big'ol Farm</h1>
-                <p class="jumbotron-text text-center">Come discover the real farm life</p>
-                <div class="text-center arrow-down">
-                    <a href="#farm"><img src="/assets/images/arrow-down.png" class="" alt="descendre"></a>
+        <section>
+            <div class="jumbotron jumbotron-fluid align-items-center">
+                <div class="container-fluid ">
+                    <h1 class="h1 jumbotron-title text-center">MacDonald's Big'ol Farm</h1>
+                    <p class="jumbotron-text text-center">Come discover the real farm life</p>
+                    <div class="text-center arrow-down">
+                        <a href="#farm"><img src="/assets/images/arrow-down.png" class="" alt="descendre"></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     </header>
-<body>
+    <body>
     <section class="farm" id="farm">
 
         <div class="container-fluid py-3">
@@ -36,7 +36,7 @@
                         <p>Here a moo, there a moo</p>
                         <p>Everywhere a moo moo</p>
                         <p>Old MacDonald had a farm E-I-E-I-O</p>
-                </div>
+                    </div>
                 </div>
 
                 <div class="col-lg-4 col-sm-12 text-center py-5">
@@ -74,24 +74,39 @@
         </div>
     </section>
 
-    <section class="container fluid text-center" id="form" >
+    <section class="container fluid text-center" id="form">
         <div class="form">
-        <h2>Come spend easter's week-end with us</h2>
-        <form action="index.php" method="POST" novalidate>
-            <div class="form-group">
-                <label for="lastName">Lastname</label>
-                <input class="form-control" type="text" name="lastName" id="lastName" required>
-            </div>
+            <h2>Come spend Easter weekend with us</h2>
+            <form action="index.php" method="POST" >
+                <div class="form-group">
+                    <label for="lastName">Lastname</label>
+                    <input class="form-control" type="text" name="lastName" id="lastName" required>
+                </div>
 
-            <div class="form-group">
-                <label for="firstName">Firstname</label>
-                <input class="form-control" type="text" name="firstName" id="firstName" required>
-            </div>
-            <button class="btn btn-success"> Reservation request</button>
-        </form>
+                <div class="form-group">
+                    <label for="firstName">Firstname</label>
+                    <input class="form-control" type="text" name="firstName" id="firstName" required>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1" >Number of person</label>
+                        <select class="form-control" id="exampleFormControlSelect1" required>
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Would you like to share something with us</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                    </div>
+                </div>
+                <button class="btn btn-success"> Reservation request</button>
+            </form>
         </div>
     </section>
-</body>
+    </body>
 
 {% endblock %}
 
