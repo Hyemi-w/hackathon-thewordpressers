@@ -19,9 +19,7 @@
         <source src="/assets/audio/cowboy.mp3" type="audio/mpeg">
     </audio>
     <section class="farm" id="farm">
-
         <div class="container-fluid py-3">
-
             <div class="row">
                 <div class="col-lg-8 col-sm-12 text-center mx-auto">
                     <h2>Who are we ?</h2>
@@ -30,8 +28,6 @@
             <div class="row justify-content-center py-3">
                 <div class="col-lg-8 col-sm-12 text-center mx-auto display">
                     <div class="text-center mx-auto">
-
-
                         <p>Old MACDONALD had a farm E-I-E-I-O</p>
                         <p>And on his farm he had a cow E-I-E-I-O</p>
                         <p>With a moo moo here</p>
@@ -41,7 +37,6 @@
                         <p>Old MacDonald had a farm E-I-E-I-O</p>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-sm-12 text-center py-5">
                     <img src="/assets/images/cow1.webp" class="img-thumbnail" alt="Responsive image">
                 </div>
@@ -51,9 +46,7 @@
     </section>
 
     <section class="activities">
-
         <div class="container-fluid py-3">
-
             <div class="row">
                 <div class="col-lg-8 col-sm-12 text-center mx-auto">
                     <h2>Activities</h2>
@@ -65,21 +58,16 @@
                 </div>
                 <div class="col-lg-8 col-sm-12 text-center mx-auto display">
                     <div class="text-center mx-auto">
-
-
                         <p>And on his farm he had a pig E-I-E-I-O</p>
                         <p>With a oink oink here</p>
                         <p>And a oink oink there</p>
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="farm" id="farm">
-
         <div class="container-fluid py-3">
-
             <div class="row">
                 <div class="col-lg-8 col-sm-12 text-center mx-auto">
                     <h2>Who are we ?</h2>
@@ -88,8 +76,6 @@
             <div class="row justify-content-center py-3">
                 <div class="col-lg-8 col-sm-12 text-center mx-auto display">
                     <div class="text-center mx-auto">
-
-
                         <p>Old MACDONALD had a farm E-I-E-I-O</p>
                         <p>And on his farm he had some chickens E-I-E-I-O</p>
                         <p>With a cluck cluck here</p>
@@ -107,7 +93,7 @@
 
     <section class="container fluid text-center" id="form">
         <div class="form">
-            <h2>Come spend Easter weekend with us</h2>
+            <h2>Come spend Easter weekend with us !</h2>
             <form action="index.php" method="POST" >
                 <div class="form-group">
                     <label for="lastName">Lastname</label>
@@ -129,7 +115,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Would you like to share something with us</label>
+                        <label for="exampleFormControlTextarea1">Would you like to share something with us ?</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
                     </div>
                 </div>
@@ -140,4 +126,6 @@
     </body>
 
 {% endblock %}
-
+{% block javascript %}
+{% include 'index-javascript.js' %}
+{% endblock %}
