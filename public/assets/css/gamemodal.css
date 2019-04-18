@@ -1,0 +1,30 @@
+
+
+
+
+/*  Game intro modal  */
+
+#gamemodal {
+
+
+
+}
+.modal-backdrop {
+}
+
+.gamemodaltext {
+    padding: 2.5rem;
+    color: lightyellow;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.modal-content {
+
+}
+
+.modal-body {
+    background-image: url("https://images.pexels.com/photos/413195/pexels-photo-413195.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+
+/*  End game intro modal  */
