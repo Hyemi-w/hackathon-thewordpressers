@@ -1,0 +1,26 @@
+/*
+
+HTML:
+
+<link rel="stylesheet" href="../../assets/css/frodo.css">
+
+<div id="frodo2"><img src="/../../assets/images/Frodo2.png" id="frodo" alt="g"></div>
+
+
+ */
+
+
+
+
+
+
+@keyframes mymove {
+    from {bottom: -1000px;}
+    to {bottom: 1000px;}
+}
+
+
+div {
+    position :relative;
+    animation: mymove 5s infinite;
+}

@@ -8,6 +8,8 @@
 
 namespace App\Controller;
 
+use GuzzleHttp\Client;
+
 class HomeController extends AbstractController
 {
     /**
@@ -21,8 +23,28 @@ class HomeController extends AbstractController
 
     public function index()
     {
-        $_SESSION['eggCount'] = 0;
-        $eggCount = $_SESSION['eggCount'];
-        return $this->twig->render('Home/index.html.twig', ['eggCount' => $eggCount]);
+        $client = new Client(['base_uri' => 'http://easteregg.wildcodeschool.fr/api/',]);
+
+        $response = $client->request('GET', 'eggs/random');
+        $body = $response->getBody();
+        $json = $body->getContents();
+        $egg = json_decode($json, true);
+
+        $client = new Client(['base_uri' => 'http://easteregg.wildcodeschool.fr/api/',]);
+
+        $response = $client->request('GET', 'characters/random');
+        $body = $response->getBody();
+        $json = $body->getContents();
+        $character = json_decode($json, true);
+
+        $title = '';
+        if (strstr($egg['power'], 'increase')) {
+            $title = 'Yay !';
+        } elseif (strstr($egg['power'], 'decrease')) {
+            $title = 'Crap !';
+        }
+
+        return $this->twig->render('Home/index.html.twig', ['egg' => $egg, 'character' => $character,
+            'title' => $title]);
     }
 }
