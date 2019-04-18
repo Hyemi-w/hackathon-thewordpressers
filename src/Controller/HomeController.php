@@ -10,7 +10,6 @@ namespace App\Controller;
 
 class HomeController extends AbstractController
 {
-
     /**
      * Display home page
      *
@@ -19,8 +18,12 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
+
+
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $_SESSION['eggCount'] = 0;
+        $eggCount = $_SESSION['eggCount'];
+        return $this->twig->render('Home/index.html.twig', ['eggCount' => $eggCount]);
     }
 }
