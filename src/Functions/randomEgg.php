@@ -12,8 +12,7 @@ function randomEgg(): array
     $client = new Client([
             'base_uri' => 'http://easteregg.wildcodeschool.fr/api/',
             'timeout' => 2.0,
-        ]
-    );
+        ]);
 
     $response = $client->request('GET', 'eggs/random');
 
