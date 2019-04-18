@@ -10,7 +10,6 @@
 
 .jumbotron-text {
     color: #b30000;
-    font-size: 2vw;
     padding: 2em 5.5em 8% 5.5em;
     text-shadow:0.5px 0.5px #000000;
 }
@@ -18,7 +17,6 @@
 .jumbotron-title {
     font-weight: lighter;
     color: #800000;
-    font-size: 4vw;
     padding-bottom: 5%;
     text-shadow:0.5px 0.5px #000000;
 }
@@ -49,21 +47,21 @@ body{
 
 p {
 
-    font-family: 'Lato', sans-serif;
-    font-size: 2em;
+
+    font-size: 3em;
 
 }
 
 h1{
 
-    font-family: 'Montserrat', sans-serif;
-    font-size:4em;
+
+    font-size:6em;
 }
 
 h2 {
 
-    font-family: 'Montserrat', sans-serif;
-    font-size:2.5em;
+
+    font-size:3.5em;
     padding-top: 2em;
     padding-bottom: 2em;
 }
