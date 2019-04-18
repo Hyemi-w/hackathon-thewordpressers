@@ -37,13 +37,13 @@ class HomeController extends AbstractController
         $json = $body->getContents();
         $character = json_decode($json, true);
 
-        $title = '';
+        $title1 = '';
         $isWinning = '';
         if (strstr($egg['power'], 'increase')) {
-            $title = 'Yay !';
+            $title1 = 'Yay !';
             $isWinning = 'getting';
         } elseif (strstr($egg['power'], 'decrease')) {
-            $title = 'Crap !';
+            $title1 = 'Crap !';
             $isWinning = 'losing';
         }
 
@@ -104,6 +104,6 @@ class HomeController extends AbstractController
 
         return $this->twig->render('Home/index.html.twig', ['egg' => $egg, 'character' => $character,
             'title' => $title, 'isWinning' => $isWinning, 'number' => $number, 'size' => $size,
-            'isGiving' => $isGiving, 'gender' => $gender, 'skill' => $skill]);
+            'isGiving' => $isGiving, 'gender' => $gender, 'skill' => $skill, 'title1' => $title1]);
     }
 }
