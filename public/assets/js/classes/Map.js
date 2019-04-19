@@ -16,19 +16,19 @@ function Map(nom) {
 }
 
 // Pour récupérer la taille (en tiles) de la carte
-Map.prototype.getHauteur = function() {
+Map.prototype.getHeight = function() {
 	return this.terrain.length;
 }
-Map.prototype.getLargeur = function() {
+Map.prototype.getWidth = function() {
 	return this.terrain[0].length;
 }
 
-Map.prototype.dessinerMap = function(context) {
+Map.prototype.drawMap = function(context) {
 	for(var i = 0, l = this.terrain.length ; i < l ; i++) {
-		var ligne = this.terrain[i];
+		var line = this.terrain[i];
 		var y = i * 48;
-		for(var j = 0, k = ligne.length ; j < k ; j++) {
-			this.tileset.dessinerTile(ligne[j], context, j * 48, y);
+		for(var j = 0, k = line.length ; j < k ; j++) {
+			this.tileset.drawTile(line[j], context, j * 48, y);
 		}
 	}
 }

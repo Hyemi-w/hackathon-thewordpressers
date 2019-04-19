@@ -11,6 +11,18 @@
     border: solid 3px lightblue;
 }
 
+.yoshi_egg{
+    width: 45px;
+}
+
+.cadre{
+    position: absolute;
+    box-sizing: content-box;
+    width: 150px;
+    border: solid #000 1px;
+    padding: 1px;
+}
+
 canvas{
 	border: 1px solid black;
 }

@@ -1,12 +1,11 @@
-var map = new Map("premiere");
+var map = new Map("map");
 
 window.onload = function() {
 	var canvas = document.getElementById('canvas');
 	var ctx = canvas.getContext('2d');
 	
-	canvas.width  = map.getLargeur() * 48;
-	canvas.height = map.getHauteur() * 48;
+	canvas.width  = map.getWidth() * 48;
+	canvas.height = map.getHeight() * 48;
 
-
-	map.dessinerMap(ctx);
+	map.drawMap(ctx);
 }

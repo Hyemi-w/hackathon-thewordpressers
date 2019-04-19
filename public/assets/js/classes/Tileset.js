@@ -7,16 +7,16 @@ function Tileset(url) {
 			throw new Error("Erreur de chargement du tileset nommé \"" + url + "\".");
 		
 		// Largeur du tileset en tiles
-		this.referenceDuTileset.largeur = this.width / 48;
+		this.referenceDuTileset.width = this.width / 48;
 	}
 	this.image.src = "assets/tilesets/" + url;
 }
 
 // Méthode de dessin du tile numéro "numero" dans le contexte 2D "context" aux coordonnées x et y
-Tileset.prototype.dessinerTile = function(numero, context, xDestination, yDestination) {
-	var xSourceEnTiles = numero % this.largeur;
-	if(xSourceEnTiles == 0) xSourceEnTiles = this.largeur;
-	var ySourceEnTiles = Math.ceil(numero / this.largeur);
+Tileset.prototype.drawTile = function(numero, context, xDestination, yDestination) {
+	var xSourceEnTiles = numero % this.width;
+	if(xSourceEnTiles == 0) xSourceEnTiles = this.width;
+	var ySourceEnTiles = Math.ceil(numero / this.width);
 	
 	var xSource = (xSourceEnTiles - 1) * 48;
 	var ySource = (ySourceEnTiles - 1) * 48;
