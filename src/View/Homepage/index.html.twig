@@ -95,7 +95,7 @@
         <div class="form">
 
             <h2>Come spend Easter weekend with us !</h2>
-            <form action="" method="POST" novalidate>
+            <form action="" method="POST">
 
                 <div class="form-group">
                     <label for="lastName">Lastname</label>
@@ -117,7 +117,7 @@
                     {% endif %}
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Number of person</label>
-                        <select class="form-control" id="exampleFormControlSelect1" name="select" required
+                        <select class="form-control" id="exampleFormControlSelect1" name="select" >
                                 value="{{ select }}">
                             <option></option>
                             <option>1</option>
@@ -133,7 +133,7 @@
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Would you like to share something with us ?</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" name="suggestion" rows="3"
-                                      required value="{{ suggestion }}"></textarea>
+                                       value="{{ suggestion }}"></textarea>
                             {% if errors.suggestion is defined %}
                                 <div class="errors">{{ errors.suggestion }}</div>
                             {% endif %}
