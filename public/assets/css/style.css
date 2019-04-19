@@ -11,10 +11,25 @@
 .border-modal{
     border: solid 3px lightblue;
 }
-
-.yoshi_egg{
-    width: 45px;
+.egg-count img{
+    padding-top: 15px;
+    padding-right: 15px;
+    max-height : 55px;
+    float: left;
 }
+
+.canvas-fluid {
+    font-family: 'Just Another Hand', cursive;
+    font-size : 55px;
+    position: relative;
+    float: right;
+}
+
+.canvas-fluid, #overlay {
+    position:absolute;
+}
+
+
 
 .cadre{
     position: absolute;
