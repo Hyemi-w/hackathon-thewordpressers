@@ -61,6 +61,11 @@ function getPosition(event) {
     isClicked(objectPos);
 
     function isClicked(pos) {
+        if (playerPos.x >= 1351 && playerPos.x <= 11438 && playerPos.y <= 849 && playerPos.y >= 785) {
+            $('#exampleModalCenter').modal('hide')
+            counter -= 2;
+        }
+
         pos.forEach((v) => {
             if (playerPos.x >= v.x1 && playerPos.x <= v.x2 && playerPos.y <= v.y1 && playerPos.y >= v.y2) {
                 isEgg();
@@ -105,6 +110,7 @@ function getPosition(event) {
         document.getElementById('displayEgg').innerHTML = 'Eggs : ' + counter + '&nbsp&nbsp&nbsp&nbsp</div>';  //elementID changé pour marcher avec html div id. C'était 'count'
         if (counter < 0) {
           counter = 0;
+          $('#exampleModalCenter').modal('hide');
           document.getElementById('frodo2').style.display = "block";
             var audio = new Audio('scary1.mp3');
             var audio1 = new Audio('scary2.mp3');
@@ -112,7 +118,7 @@ function getPosition(event) {
             audio1.play();
           setTimeout(function () {
             window.location = "/Creepy/index";
-            }, 4000);
+            }, 8000);
        }
     }
 }
