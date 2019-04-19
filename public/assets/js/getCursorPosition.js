@@ -118,7 +118,7 @@ function getPosition(event) {
             audio1.play();
           setTimeout(function () {
             window.location = "/Creepy/index";
-            }, 8000);
+            }, 10000);
        }
     }
 }
