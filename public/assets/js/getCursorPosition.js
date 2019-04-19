@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", init, false);
-let counter = 0;
-let rarity;
+counter = 0;
+
 
 function init()
 {
@@ -62,8 +62,10 @@ function getPosition(event) {
 
     function isClicked(pos) {
         if (playerPos.x >= 1351 && playerPos.x <= 11438 && playerPos.y <= 849 && playerPos.y >= 785) {
-            $('#exampleModalCenter').modal('hide')
-            counter -= 2;
+            counter -= 2;  // the rock
+        }
+        if (playerPos.x >= 434 && playerPos.x <= 527 && playerPos.y <= 114 && playerPos.y >= 18) {
+            counter += 2;  // house #2
         }
 
         pos.forEach((v) => {
@@ -106,11 +108,11 @@ function getPosition(event) {
                 counter += 3;
                 break;
         }
+
+        document.getElementById('displayEgg').innerHTML = 'Eggs : ' + counter + '&nbsp&nbsp&nbsp&nbsp';  //elementID changé pour marcher avec html div id. C'était 'count'
         $('#exampleModalCenter').modal('show');
-        document.getElementById('displayEgg').innerHTML = 'Eggs : ' + counter + '&nbsp&nbsp&nbsp&nbsp</div>';  //elementID changé pour marcher avec html div id. C'était 'count'
         if (counter < 0) {
           counter = 0;
-          $('#exampleModalCenter').modal('hide');
           document.getElementById('frodo2').style.display = "block";
             var audio = new Audio('../assets/audio/scary1.mp3');
             var audio1 = new Audio('../assets/audio/scary2.mp3');
