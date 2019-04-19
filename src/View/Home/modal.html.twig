@@ -4,8 +4,8 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade bd-example-modal-xl" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
+<div class="modal fade bd-example-modal-lg" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content border-modal">
             <div class="modal-header">
                 <h5 class="modal-title col" id="exampleModalLongTitle">{{ title }}</h5>
@@ -16,7 +16,7 @@
             <div class="modal-body">
                 <div class="row">
                     <img src="{{ character.image }}" class="col-lg-4 col-sm-12">
-                    <p class="col align-self-center text-center modal-text">You just found {{ character.name }} !</br></br> You're getting 2 points.</p>
+                    <p class="col align-self-center text-center modal-text">You just found {{ character.name }} !</br></br> {{ gender }} uses {{ skill }} and {{ isGiving }} you {{ number }} points.</p>
                 </div>
             </div>
             <div class="modal-footer">
@@ -32,11 +32,11 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade bd-example-modal-xl" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
+<div class="modal fade bd-example-modal-lg" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content border-modal">
             <div class="modal-header">
-                <h5 class="modal-title col" id="exampleModalLongTitle">{{ title }}</h5>
+                <h5 class="modal-title col" id="exampleModalLongTitle">{{ title1 }}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -44,7 +44,7 @@
             <div class="modal-body">
                 <div class="row">
                     <img src="{{ egg.image }}" class="col-lg-4 col-sm-12">
-                    <p class="col align-self-center text-center modal-text">You just found an {{ egg.name }}!</br></br> You're getting 2 points.</p>
+                    <p class="col align-self-center text-center modal-text">You just found {{ size }} {{ egg.name }}!</br></br> You're {{ isWinning }} {{ number }} points.</p>
                 </div>
             </div>
             <div class="modal-footer">
