@@ -72,7 +72,7 @@ function getPosition(event)
     function isEgg(){
             counter++;
             $('#exampleModalCenter').modal('show');
-            document.getElementById('displayEgg').innerHTML = 'count : '+counter+'&nbsp&nbsp&nbsp&nbsp<img src="assets/images/yoshi_egg.png" class="yoshi_egg"></div>';  //elementID changé pour marcher avec html div id. C'était 'count'
+            document.getElementById('displayEgg').innerHTML = 'Eggs : '+counter+'&nbsp&nbsp&nbsp&nbsp';  //elementID changé pour marcher avec html div id. C'était 'count'
         /*else{
             $('#exampleModalCenter').modal('show');
             counter--;
