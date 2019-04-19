@@ -8,7 +8,7 @@
 
 namespace App\Controller;
 
-class CreepyHomePage extends AbstractController
+class CreepyController extends AbstractController
 {
     /**
      * Display creepy home page
@@ -20,6 +20,6 @@ class CreepyHomePage extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('CreepyHomePage/index.html.twig');
+        return $this->twig->render('Creepy/index.html.twig');
     }
 }

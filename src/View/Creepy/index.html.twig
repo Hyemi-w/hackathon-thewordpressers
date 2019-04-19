@@ -1,13 +1,14 @@
 {% extends 'layout.html.twig' %}
 
+{% block stylesheet %}<link rel="stylesheet" href="/assets/css/creepy.css">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">{% endblock %}
 {% block content %}
-{% block stylesheet %}<link rel="stylesheet" href="/assets/css/creepy.css">{% endblock %}
 <header>
     <section>
         <div class="jumbotron jumbotron-fluid align-items-center">
             <div class="container-fluid ">
                 <h1 class="h1 jumbotron-title text-center">MacDonald's Big'ol Farm</h1>
-                <p class="jumbotron-text text-center">Come discover the real farm life</p>
+                <p class="jumbotron-text text-center">Come discover the real <span class="overlined">farm</span> <span class="corrected">horror</span> life</p>
                 <div class="text-center arrow-down">
                     <a href="#farm"><img src="/assets/images/arrow-down.png" class="" alt="descendre"></a>
                 </div>
@@ -39,7 +40,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-12 text-center py-5">
-                    <img src="/assets/images/cow1.webp" class="img-thumbnail" alt="Responsive image">
+                    <img src="/assets/images/entrecote.jpg" class="img-thumbnail" alt="Responsive image">
                 </div>
 
             </div>
@@ -55,7 +56,7 @@
             </div>
             <div class="row justify-content-center py-3">
                 <div class="col-lg-4 col-sm-12 text-center py-5">
-                    <img src="/assets/images/pig.webp" class="img-thumbnail" alt="Responsive image">
+                    <img src="/assets/images/saucisson.jpg" class="img-thumbnail" alt="Responsive image">
                 </div>
                 <div class="col-lg-8 col-sm-12 text-center mx-auto display">
                     <div class="text-center mx-auto">
@@ -85,11 +86,13 @@
                 </div>
 
                 <div class="col-lg-4 col-sm-12 text-center py-5">
-                    <img src="/assets/images/chick.webp" class="img-thumbnail" alt="Responsive image">
+                    <img src="/assets/images/nugget.jpg" class="img-thumbnail" alt="Responsive image">
                 </div>
 
             </div>
         </div>
+
+        <h2 class="end-title">Joyeuses Pâques, et n'oubliez pas, n'abusez pas des bonnes choses. ;)</h2></p>
     </section>
 </body>
 {% endblock %}
