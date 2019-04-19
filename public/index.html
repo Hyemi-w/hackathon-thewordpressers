@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Mini-RPG</title>
+<head>
+    <title>Mini-RPG</title>
 
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-		<script
-				src="https://code.jquery.com/jquery-3.4.0.min.js"
-				integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-				crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="assets/js/json2.js"></script>
-		<script type="text/javascript" src="assets/js/oXHR.js"></script>
-		<script type="text/javascript" src="assets/js/classes/Map.js"></script>
-		<script type="text/javascript" src="assets/js/classes/Tileset.js"></script>
-		<script type="text/javascript" src="assets/js/rpg.js"></script>
-		<script type="text/javascript" src="assets/js/getCursorPosition.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Just+Another+Hand|Bree+Serif" rel="stylesheet">
-		<link rel="stylesheet" href="../../assets/css/frodo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <script
+            src="https://code.jquery.com/jquery-3.4.0.min.js"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/json2.js"></script>
+    <script type="text/javascript" src="assets/js/oXHR.js"></script>
+    <script type="text/javascript" src="assets/js/classes/Map.js"></script>
+    <script type="text/javascript" src="assets/js/classes/Tileset.js"></script>
+    <script type="text/javascript" src="assets/js/rpg.js"></script>
+    <script type="text/javascript" src="assets/js/getCursorPosition.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand|Bree+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/frodo.css">
 
 
-	</head>
-	<body>
+</head>
+<body>
 
-		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
 
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalCenterTitle"></h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<img src='' class="modal-content" id="imgModal">
-					<h4 id="modalText" class="text-center"></h4>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-		<div class="container-fluid">
-			<div class="row canvas-fluid">
-				<canvas id="canvas"></canvas>
-				<div id="overlay" class="egg-count col-4 offset-10">
-					<img src="assets/images/yoshi_egg.png" alt="egg"/>
-					<div id="displayEgg">Eggs : 0&nbsp&nbsp&nbsp&nbsp</div>
-				</div>
-			</div>
-		</div>
-		<div id="frodo2" style="display:none;"><img src="/../../assets/images/Frodo2.png" id="frodo" alt="g"></div>
-	</body>
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src='' class="modal-content" id="imgModal">
+                <h4 id="modalText" class="text-center"></h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row canvas-fluid">
+        <canvas id="canvas"></canvas>
+        <div id="overlay" class="egg-count col-4 offset-10">
+            <img src="assets/images/yoshi_egg.png" alt="egg"/>
+            <div id="displayEgg">Eggs : 0&nbsp&nbsp&nbsp&nbsp</div>
+        </div>
+    </div>
+</div>
+<div id="frodo2" style="display:none;"><img src="/../../assets/images/Frodo2.png" id="frodo" alt="g"></div>
+</body>
+
+</body>
 </html>
