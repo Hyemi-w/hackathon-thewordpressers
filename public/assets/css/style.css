@@ -24,9 +24,7 @@
     border: solid 3px lightblue;
 }
 
-canvas{
-	border: 1px solid black;
-}
+
 /* jumbotron homepage */
 .jumbotron {
     background-image: url("../images/jumbotron.webp");
@@ -118,3 +116,12 @@ audio{
     display:none;
 }
 
+/*canvas mini rpg*/
+.canvas {
+    border: 1px solid black;
+    height: 100vh;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+/*fin canvas mini rpg*/

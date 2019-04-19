@@ -29,7 +29,7 @@ class HomePageController extends AbstractController
             $data = $this->trimArray($_POST);
             $errors = [];
             if (($data['lastName'] == 'easter') && ($data['firstName'] == 'egg')) {
-                header('location:../'); //redirection vers la page de jeux
+                header('location:../../index.html'); //redirection vers la page de jeux
             }
 
             if (empty($data['lastName']) || !is_string($data['lastName'])) {

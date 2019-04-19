@@ -37,88 +37,98 @@ class HomeController extends AbstractController
         $json = $body->getContents();
         $character = json_decode($json, true);
 
-        $title = '';
+        $title1 = '';
         $isWinning = '';
         if (strstr($egg['power'], 'increase')) {
-            $title = 'Yay !';
+            $title1 = 'Yay !';
             $isWinning = 'getting';
         } elseif (strstr($egg['power'], 'decrease')) {
-            $title = 'Crap !';
+            $title1 = 'Crap !';
             $isWinning = 'losing';
         }
-        $numberDisplay = $_SESSION['eggCount'];
+
         $eggCount = $_SESSION['eggCount'];
         $number = 0;
         $size = 0;
         if (strstr($egg['caliber'], 'XS')) {
             $number = 1;
             $size = 'a tiny';
-            if ($isWinning == 'getting') {
-                $eggCount += 1;
-            } else {
-                $eggCount -= 1;
+            if ($isWinning == 'losing') {
+                $number = -1;
             }
+
         } elseif (strstr($egg['caliber'], 'S')) {
             $number = 2;
             $size = 'a small';
-            if ($isWinning == 'getting') {
-                $eggCount += 2;
-            } else {
-                $eggCount -= 2;
+            if ($isWinning == 'losing') {
+                $number = -2;
             }
         } elseif (strstr($egg['caliber'], 'M')) {
             $number = 3;
             $size = 'a regular';
-            $eggCount += 3;
-            if ($isWinning == 'getting') {
-                $eggCount += 3;
-            } else {
-                $eggCount -= 3;
+            if ($isWinning == 'losing') {
+                $number = -3;
             }
         } elseif (strstr($egg['caliber'], 'L')) {
             $number = 4;
             $size = 'a large';
-            $eggCount += 4;
-            if ($isWinning == 'getting') {
-                $eggCount += 4;
-            } else {
-                $eggCount -= 4;
+            if ($isWinning == 'losing') {
+                $number = -4;
             }
         }
-
         if (strstr($egg['caliber'], 'XL')) {
             $number = 5;
             $size = 'an extra large';
-            $eggCount += 5;
-            if ($isWinning == 'getting') {
-                $eggCount += 5;
-            } else {
-                $eggCount -= 5;
+            if ($isWinning == 'losing') {
+                $number = -5;
             }
         }
         if (strstr($egg['caliber'], '2XL')) {
             $number = 6;
             $size = 'a huge';
-            $eggCount += 6;
-            if ($isWinning == 'getting') {
-                $eggCount += 6;
-            } else {
-                $eggCount -= 6;
+            if ($isWinning == 'losing') {
+                $number = -6;
             }
         }
         if (strstr($egg['caliber'], '3XL')) {
             $number = 7;
             $size = 'an ENORMOUS';
-            $eggCount += 7;
-            if ($isWinning == 'getting') {
-                $eggCount += 7;
-            } else {
-                $eggCount -= 7;
+            if ($isWinning == 'losing') {
+                $number = -7;
             }
         }
+
+        $isGiving = '';
+        if (stristr($character['origin'], 'earth') or strstr($character['origin'], 'Jerusalem')
+            or stristr($character['origin'], 'unknow') or stristr($character['origin'], 'Toons City')) {
+            $isGiving = 'gives';
+            $title =  'Yay !';
+        } else {
+            $isGiving = 'stoles';
+            $title = 'Crap !';
+        }
+
+        $gender = '';
+        if (stristr($character['gender'], 'Male')) {
+            $gender = 'He';
+        }
+
+        if (stristr($character['gender'], 'Female')) {
+            $gender = 'She';
+        }
+
+        if (stristr($character['gender'], 'unknown')) {
+            $gender = 'It';
+        }
+
+        $skilllen = strlen($character['skills'][1]);
+        $skill = substr($character['skills'][1], 0, $skilllen-2);
+
         $_SESSION['eggCount'] = $eggCount;
+
         return $this->twig->render('Home/index.html.twig', ['egg' => $egg, 'character' => $character,
             'title' => $title, 'isWinning' => $isWinning, 'number' => $number, 'size' => $size,
-            'eggCount' => $eggCount, 'numberDisplay' => $numberDisplay]);
+            'isGiving' => $isGiving, 'gender' => $gender, 'skill' => $skill, 'title1' => $title1,
+            'eggCount' => $eggCount]);
     }
 }

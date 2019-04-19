@@ -1,4 +1,4 @@
-var map = new Map("premiere");
+var map = new Map("map");
 
 window.onload = function() {
 	var canvas = document.getElementById('canvas');

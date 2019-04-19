@@ -9,12 +9,11 @@
     close.onclick = function () {
         div.innerHTML = 'Eggs : {{ eggCount }}';
         window.location.reload()
-
     }
 
     var close1 = document.getElementById('btn1');
     close1.onclick = function () {
-            div.innerHTML = 'Eggs : {{ eggCount }}';
+            div.innerHTML = 'Eggs : {{ EggCount }}';
             window.location.reload()
         }
 
