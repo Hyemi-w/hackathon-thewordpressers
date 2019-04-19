@@ -11,14 +11,14 @@ namespace App\Controller;
 class CreepyHomePage extends AbstractController
 {
     /**
-     * Display creepy home page page
+     * Display creepy home page
      *
      * @return string
      * @throws \Twig\Error\LoaderError
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function creepyHomePage()
+    public function index()
     {
         return $this->twig->render('CreepyHomePage/index.html.twig');
     }
