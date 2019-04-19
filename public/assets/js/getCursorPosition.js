@@ -48,7 +48,6 @@ function getPosition(event)
             return response.json();
         })
         .then(function(text) {
-            console.log('Request successful', text);
             $('#exampleModalCenterTitle').text(text['name'])
             $('#imgModal').attr("src",text['image']);
             $('#modalText').html(text['rarity']);
@@ -68,19 +67,18 @@ function getPosition(event)
         })
     }
 
-
     function isEgg(){
             counter++;
             $('#exampleModalCenter').modal('show');
             document.getElementById('count').innerHTML = 'count : '+counter+'&nbsp&nbsp&nbsp&nbsp<img src="assets/images/yoshi_egg.png" class="yoshi_egg"></div>';
-        /*else{
-            $('#exampleModalCenter').modal('show');
-            counter--;
-            if(counter <= 0){
-                counter = 0;
-            }
-            document.getElementById('count').innerHTML = 'count : '+counter;
-        }*/
+/*else{
+    $('#exampleModalCenter').modal('show');
+    counter--;
+    if(counter <= 0){
+        counter = 0;
     }
+    document.getElementById('count').innerHTML = 'count : '+counter;
+}*/
+}
 
 }
