@@ -1,0 +1,94 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+{% block stylesheet %}<link rel="stylesheet" href="/assets/css/creepy.css">{% endblock %}
+<header>
+    <section>
+        <div class="jumbotron jumbotron-fluid align-items-center">
+            <div class="container-fluid ">
+                <h1 class="h1 jumbotron-title text-center">MacDonald's Big'ol Farm</h1>
+                <p class="jumbotron-text text-center">Come discover the real farm life</p>
+                <div class="text-center arrow-down">
+                    <a href="#farm"><img src="/assets/images/arrow-down.png" class="" alt="descendre"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+<body>
+    <audio controls autoplay>
+        <source src="/assets/audio/creepy.mp3" type="audio/mpeg">
+    </audio>
+    <section class="farm" id="farm">
+        <div class="container-fluid py-3">
+            <div class="row">
+                <div class="col-lg-8 col-sm-12 text-center mx-auto">
+                    <h2>Who are we ?</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center py-3">
+                <div class="col-lg-8 col-sm-12 text-center mx-auto display">
+                    <div class="text-center mx-auto">
+                        <p>Old MACDONALD had a farm E-I-E-I-O</p>
+                        <p>And on his farm he had a cow E-I-E-I-O</p>
+                        <p>With a moo moo here</p>
+                        <p>And a moo moo there</p>
+                        <p>Here a moo, there a moo</p>
+                        <p>Everywhere a moo moo</p>
+                        <p>Old MacDonald had a farm E-I-E-I-O</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 text-center py-5">
+                    <img src="/assets/images/cow1.webp" class="img-thumbnail" alt="Responsive image">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="activities">
+        <div class="container-fluid py-3">
+            <div class="row">
+                <div class="col-lg-8 col-sm-12 text-center mx-auto">
+                    <h2>Activities</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center py-3">
+                <div class="col-lg-4 col-sm-12 text-center py-5">
+                    <img src="/assets/images/pig.webp" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-lg-8 col-sm-12 text-center mx-auto display">
+                    <div class="text-center mx-auto">
+                        <p>And on his farm he had a pig E-I-E-I-O</p>
+                        <p>With a oink oink here</p>
+                        <p>And a oink oink there</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="farm" id="farm">
+        <div class="container-fluid py-3">
+            <div class="row">
+                <div class="col-lg-8 col-sm-12 text-center mx-auto">
+                    <h2>Our crops</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center py-3">
+                <div class="col-lg-8 col-sm-12 text-center mx-auto display">
+                    <div class="text-center mx-auto">
+                        <p>Old MACDONALD had a farm E-I-E-I-O</p>
+                        <p>And on his farm he had some chickens E-I-E-I-O</p>
+                        <p>With a cluck cluck here</p>
+                        <p>And a cluck cluck there</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-12 text-center py-5">
+                    <img src="/assets/images/chick.webp" class="img-thumbnail" alt="Responsive image">
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
