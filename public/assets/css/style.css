@@ -1,18 +1,25 @@
 
 .modal-title{
     text-align: center;
-    font-size: 2em;
+    font-size: 1em;
     font-family: 'Bree Serif', serif;
 
 }
 
 .modal-text{
-    font-size: 1.5em;
+    font-size: 0.5em;
     font-family: 'Bree Serif', serif;
 }
 
 .border-modal{
     border: solid 3px lightblue;
+}
+.modal-footer button{
+    font-size: 0.5em;
+}
+.modal-content img{
+    max-height:450px;
+    object-fit: cover;
 }
 
 /* jumbotron homepage */
@@ -81,7 +88,6 @@ h2 {
     border:none;
     margin-bottom: 1em;
     font-size:1em;
-
 }
 .btn:hover{
     color : white;

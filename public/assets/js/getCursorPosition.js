@@ -106,8 +106,8 @@ function getPosition(event) {
         if (counter < 0) {
           counter = 0;
           document.getElementById('frodo2').style.display = "block";
-            var audio = new Audio('scary1.mp3');
-            var audio1 = new Audio('scary2.mp3');
+            var audio = new Audio('../assets/audio/scary1.mp3');
+            var audio1 = new Audio('../assets/audio/scary2.mp3');
             audio.play();
             audio1.play();
           setTimeout(function () {
