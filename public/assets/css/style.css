@@ -19,7 +19,7 @@
     position: absolute;
     box-sizing: content-box;
     width: 150px;
-    border: solid #000 1px;
+    border: solid #000;
     padding: 1px;
 }
 
