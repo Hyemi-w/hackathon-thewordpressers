@@ -6,6 +6,7 @@ function init()
     $('#exampleModalCenter').modal('hide')
     let canvas = document.getElementById("canvas");
     canvas.addEventListener("mousedown", getPosition, false);
+
 }
 
 function getPosition(event)
@@ -21,7 +22,6 @@ function getPosition(event)
     let playerPos = {x:x, y:y};
 
     console.log("x:" + x + " y:" + y);
-
 
     let objectPos = [
         {x1: 100, y1: 108, x2:189, y2:23, name:'house1'},
@@ -43,29 +43,44 @@ function getPosition(event)
         {x1: 1351, y1: 849, x2:11438, y2:785, name:'house4'}
     ];
 
+    fetch('http://easteregg.wildcodeschool.fr/api/eggs/random', {mode: 'cors'})
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(text) {
+            console.log('Request successful', text);
+            $('#exampleModalCenterTitle').text(text['name'])
+            $('#imgModal').attr("src",text['image']);
+            $('#modalText').html(text['rarity']);
+        })
+        .catch(function(error) {
+            console.log('Request failed', error)
+        });
+
 
     isClicked(objectPos);
 
     function isClicked(pos){
-        pos.forEach((v, i, a)=>{
+        pos.forEach((v)=>{
             if(playerPos.x >= v.x1 && playerPos.x <= v.x2 && playerPos.y <= v.y1 && playerPos.y >= v.y2){
                 isEgg();
             }
         })
     }
 
+
     function isEgg(){
-        let coinFlip = Math.floor(Math.random() * 2);
-        if(coinFlip === 1){
             counter++;
             $('#exampleModalCenter').modal('show');
-            document.getElementById('count').innerHTML = 'count : '+counter;
-        }else{
+            document.getElementById('count').innerHTML = 'count : '+counter+'&nbsp&nbsp&nbsp&nbsp<img src="assets/images/yoshi_egg.png" class="yoshi_egg"></div>';
+        /*else{
+            $('#exampleModalCenter').modal('show');
             counter--;
             if(counter <= 0){
                 counter = 0;
             }
             document.getElementById('count').innerHTML = 'count : '+counter;
-        }
+        }*/
     }
+
 }
