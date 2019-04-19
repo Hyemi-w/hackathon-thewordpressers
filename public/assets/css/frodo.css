@@ -10,17 +10,13 @@ HTML:
  */
 
 
-
-
-
-
 @keyframes mymove {
     from {bottom: -1000px;}
     to {bottom: 1000px;}
 }
 
 
-div {
+#frodo2 {
     position :relative;
-    animation: mymove 5s infinite;
+    animation: mymove 5s forwards;
 }

@@ -2,10 +2,13 @@
 .modal-title{
     text-align: center;
     font-size: 2em;
+    font-family: 'Bree Serif', serif;
+
 }
 
 .modal-text{
     font-size: 1.5em;
+    font-family: 'Bree Serif', serif;
 }
 
 .border-modal{
